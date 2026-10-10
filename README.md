@@ -3,3 +3,4 @@ Pro předmět IS.
 
 Tohle je změna z GitHubu.
 Změna z notebooku.
+Změna z GitHubu na lokální notebook.
