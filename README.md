@@ -2,3 +2,4 @@
 Pro předmět IS.
 
 Tohle je změna z GitHubu.
+Změna z notebooku.
