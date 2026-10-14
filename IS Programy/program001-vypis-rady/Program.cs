@@ -3,7 +3,12 @@
 // Řídící cyklus programu
 while(again.ToLower() == "a" )
 {
-    
+    Console.Clear();
+
+    // Hlavička programu
+    Console.WriteLine("**************************");
+    Console.WriteLine("******* Výpis řady *******");
+    Console.WriteLine("**************************");
 
 
     // dotaz směrem k uživateli na opakování
