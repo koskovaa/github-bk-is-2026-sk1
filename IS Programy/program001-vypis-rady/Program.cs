@@ -11,7 +11,7 @@ while(again.ToLower() == "a" )
     Console.WriteLine("**************************");
     Console.WriteLine();
 
-    //Vstup počáteční hodnoty - špatně řešený
+    //Vstup počáteční hodnoty
     Console.Write("Zadejte první číslo řady (celé číslo):");
     int first;
     while(!int.TryParse(Console.ReadLine(), out first)) {
