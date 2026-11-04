@@ -7,7 +7,7 @@ while(again.ToLower() == "a" )
 
     // Hlavička programu
     Console.WriteLine("**************************");
-    Console.WriteLine("***** Ciferný součet *****");
+    Console.WriteLine("***** Ciferný součin *****");
     Console.WriteLine("**************************");
     Console.WriteLine();
 
@@ -31,7 +31,7 @@ while(again.ToLower() == "a" )
 
     // příprava pomocných promněnných
     int numberBackup = number;
-    int sum = 0; // neutrální hodnota pro sčítání je 0
+    int sum = 1; // neutrální hodnota pro sčítání je 0
     int digit;  // proměnná pro uložení právě zjištěné číslice
 
     // ošetření záporných čísel
@@ -51,7 +51,7 @@ while(again.ToLower() == "a" )
         while (number > 0)
         {
             digit = number % 10; // modulo -> získáme poslední číslici
-            sum += digit;
+            sum *= digit;
             Console.WriteLine($"Získaná číslice: {digit}");
 
             number /= 10; // celočíselné dělení
@@ -62,7 +62,7 @@ while(again.ToLower() == "a" )
     Console.WriteLine();
     Console.WriteLine();
     Console.WriteLine("==========================");
-    Console.WriteLine($"Součet cifer čísla {numberBackup} je {sum}.");
+    Console.WriteLine($"Součin cifer čísla {numberBackup} je {sum}.");
     Console.WriteLine("==========================");
     Console.WriteLine();
     Console.WriteLine();
