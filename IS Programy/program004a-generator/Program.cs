@@ -55,13 +55,36 @@ while(again.ToLower() == "a" )
     // incializace generátoru náhodných čísel
     Random myRandNumb = new Random();
 
+    int negativeNumbs = 0;
+    int positiveNumbs = 0;
+    int zeros = 0;
+
     // generování náhodných čísel a jejich uložení do pole
     Console.WriteLine("Vygenerovaná pseudonáhodná čísla: ");
     for (int i = 0; i < myRandNumbs.Length; i++)
     {
        myRandNumbs[i] = myRandNumb.Next(lowerBound, upperBound+1);
        Console.Write($"{myRandNumbs[i]}; ");
+
+    if(myRandNumbs[i] > 0)
+        positiveNumbs++;
+    if(myRandNumbs[i] < 0)
+        negativeNumbs++;
+    if(myRandNumbs[i] == 0)
+        zeros++;
     }
+
+    Console.WriteLine();
+    Console.WriteLine();
+    Console.WriteLine("==========================");
+    Console.WriteLine($"Počet kladných čísel: {positiveNumbs}");
+    Console.WriteLine($"Počet záporných čísel: {negativeNumbs}");
+    Console.WriteLine($"Počet nul: {zeros}");
+    Console.WriteLine("==========================");
+    Console.WriteLine();
+    Console.WriteLine();
+
+
     Console.WriteLine();
     // dotaz směrem k uživateli na opakování
     Console.WriteLine();
