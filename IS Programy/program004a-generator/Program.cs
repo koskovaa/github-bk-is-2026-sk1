@@ -32,7 +32,7 @@ while(again.ToLower() == "a" )
     int upperBound;
         while(!int.TryParse(Console.ReadLine(), out upperBound) || upperBound <= lowerBound) {
         Console.ForegroundColor = ConsoleColor.Red;
-        Console.Write("Nezadali jste celé číslo vetší nez dolní mez. Zadejte horní mez znovu: ");
+        Console.Write("Nezadali jste celé číslo vetší než dolní mez. Zadejte horní mez znovu: ");
         Console.ResetColor();
     }
 
