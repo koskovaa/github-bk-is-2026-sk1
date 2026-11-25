@@ -59,6 +59,9 @@ while(again.ToLower() == "a" )
     int positiveNumbs = 0;
     int zeros = 0;
 
+    int evenNumbs = 0;
+    int oddNumbs = 0;
+
     // generování náhodných čísel a jejich uložení do pole
     Console.WriteLine("Vygenerovaná pseudonáhodná čísla: ");
     for (int i = 0; i < myRandNumbs.Length; i++)
@@ -66,12 +69,17 @@ while(again.ToLower() == "a" )
        myRandNumbs[i] = myRandNumb.Next(lowerBound, upperBound+1);
        Console.Write($"{myRandNumbs[i]}; ");
 
-    if(myRandNumbs[i] > 0)
+       if(myRandNumbs[i] > 0)
         positiveNumbs++;
-    if(myRandNumbs[i] < 0)
+       if(myRandNumbs[i] < 0)
         negativeNumbs++;
-    if(myRandNumbs[i] == 0)
+       if(myRandNumbs[i] == 0)
         zeros++;
+
+       if(myRandNumbs[i] % 2 == 0)
+        evenNumbs++;
+       else
+        oddNumbs++; 
     }
 
     Console.WriteLine();
@@ -80,6 +88,8 @@ while(again.ToLower() == "a" )
     Console.WriteLine($"Počet kladných čísel: {positiveNumbs}");
     Console.WriteLine($"Počet záporných čísel: {negativeNumbs}");
     Console.WriteLine($"Počet nul: {zeros}");
+    Console.WriteLine($"Počet sudých čísel: {evenNumbs}");
+    Console.WriteLine($"Počet lichých čísel: {oddNumbs}");
     Console.WriteLine("==========================");
     Console.WriteLine();
     Console.WriteLine();
